@@ -1,0 +1,21 @@
+MESSAGE
+	
+#include "EAstdlib.event"
+#include "Extensions/Hack Installation.txt"
+#include "Tools/Tool Helpers.txt"
+#include _6CDefinitions.event
+
+
+#define ObjData_859A530 $859A530 
+#define ObjData_859A53C $859A53C
+#define _MenuItemPanel_Idle 0x801E684+1
+
+ORG $B2A610
+#include "EngineHacks\src\MenuItemPanel.lyn.event"
+
+
+ORG $59AE88
+_gProc_MenuItemPanel:
+	_6C_15
+	_6C_LOOP_ROUTINE(MenuItemPanel_Idle)
+	_6C_END
