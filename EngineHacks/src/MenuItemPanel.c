@@ -73,15 +73,15 @@ void MenuItemPanel_Idle(PanelProc* proc){
 		unk_Draw( proc->xPos*8+0x33, (proc->yPos+5)*8, 1 );
 	
 	// Crit
-	if( gBattleActor.battleHitRate > gBattleTarget.battleHitRate )
+	if( gBattleActor.battleCritRate > gBattleTarget.battleCritRate )
 		unk_Draw( proc->xPos*8+0x63, (proc->yPos+3)*8, 0 );
-	if( gBattleActor.battleHitRate < gBattleTarget.battleHitRate )
+	if( gBattleActor.battleCritRate < gBattleTarget.battleCritRate )
 		unk_Draw( proc->xPos*8+0x63, (proc->yPos+3)*8, 1 );
 	
 	// Avo
-	if( gBattleActor.battleCritRate > gBattleTarget.battleCritRate )
+	if(battleAvoidRate)
 		unk_Draw( proc->xPos*8+0x63, (proc->yPos+5)*8, 0 );
-	if( gBattleActor.battleCritRate < gBattleTarget.battleCritRate )
+	if( gBattleActor.battleAvoidRate < gBattleTarget.battleAvoidRate )
 		unk_Draw( proc->xPos*8+0x63, (proc->yPos+5)*8, 1 );
 	
 	return;
